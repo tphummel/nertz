@@ -13,10 +13,14 @@
     "sqlite3": "^3.1.0"
   },
   "devDependencies": {
+    "json": "^9.0.3",
+    "lone": "^0.4.2",
     "nsp": "^1.1.0",
     "standard": "^5.3.1"
   },
-  "bin": "./cli/index.js",
+  "bin": {
+    "nertz": "bin/nertz.js"
+  },
   "scripts": {
     "nsp": "npm shrinkwrap && nsp audit-shrinkwrap",
     "lint": "standard *.js **/*.js",

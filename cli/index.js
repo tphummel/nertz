@@ -1,5 +1,6 @@
 var path = require('path')
 var fs = require('fs')
+var child_process = require('child_process')
 
 var async = require('async')
 var inquirer = require('inquirer')
@@ -23,6 +24,14 @@ function initDb (cb) {
   })
 }
 
+function showInfo () {
+  console.log(process)
+  child_process.exec('pwd && ls -lah', {}, function (err, stdout, stderr) {
+    if (err) console.error(err)
+    console.log(stdout)
+  })
+}
+
 function show () {
   async.forever(function (next) {
     inquirer.prompt([
@@ -30,10 +39,12 @@ function show () {
         name: 'mode',
         message: 'Choose module',
         type: 'list',
-        choices: subCmds.concat(['quit'])
+        choices: subCmds.concat(['quit', 'info'])
       }
     ], function (answ) {
       if (answ.mode === 'quit') return process.exit(0)
+      if (answ.mode === 'info') return showInfo()
+
       subModules[answ.mode].show(next)
     })
   })
