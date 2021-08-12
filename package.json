@@ -10,7 +10,7 @@
     "columnify": "^1.5.2",
     "first-run": "^1.1.0",
     "inquirer": "^0.10.0",
-    "sqlite3": "^3.1.0"
+    "sqlite3": "^4.0.0"
   },
   "devDependencies": {
     "nsp": "^1.1.0",
