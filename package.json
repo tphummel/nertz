@@ -4,7 +4,7 @@
   "description": "a standalone, cli application for collecting nertz results",
   "main": "cli/index.js",
   "dependencies": {
-    "async": "^1.4.2",
+    "async": "^3.2.2",
     "chalk": "^1.1.1",
     "cli-table": "^0.3.1",
     "columnify": "^1.5.2",
