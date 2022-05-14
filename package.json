@@ -5,11 +5,11 @@
   "main": "cli/index.js",
   "dependencies": {
     "async": "^1.4.2",
-    "chalk": "^1.1.1",
+    "chalk": "^2.0.0",
     "cli-table": "^0.3.1",
     "columnify": "^1.5.2",
     "first-run": "^1.1.0",
-    "inquirer": "^0.10.0",
+    "inquirer": "^6.2.1",
     "sqlite3": "^3.1.0"
   },
   "devDependencies": {
